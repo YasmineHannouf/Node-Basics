@@ -6,12 +6,8 @@ function help (){
     "function onDataReceived() receives the input sent by the user \n" +
     "function unknownCommand() is supposed to run when all other commands have failed \n"+
     "function quit() exits the App \n" +
-    "function hello() says hello \n "
-
-
-
-
-
+    "function hello() says hello \n " +
+    "function extended hello() using split\n"
   )
 }
 /**
@@ -96,4 +92,3 @@ function quit(){
 // The following line starts the application
 startApp("Yasmine Hannouf")
 
-// Command "help", that lists all the possible commands
