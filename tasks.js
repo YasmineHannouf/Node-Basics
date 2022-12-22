@@ -6,14 +6,14 @@
  * It prints a welcome line, and then a line with "----",
  * then nothing.
  *  
- * @param  {string} name the name of the app
+ * @param  {string} Yasmine the name of the app
  * @returns {void}
  */
-function startApp(name){
+function startApp(Yasmine){
   process.stdin.resume();
   process.stdin.setEncoding('utf8');
   process.stdin.on('data', onDataReceived);
-  console.log(`Welcome to ${name}'s application!`)
+  console.log(`Welcome to ${Yasmine}'s application!`)
   console.log("--------------------")
 }
 
@@ -79,4 +79,4 @@ function quit(){
 }
 
 // The following line starts the application
-startApp("Jad Sarout")
+startApp("Yasmine Hannouf")
