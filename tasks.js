@@ -1,4 +1,19 @@
 // Command "help", that lists all the possible commands
+function help (){
+  console.log(
+
+    'function startApp() used to welcome App\n'+
+    "function onDataReceived() receives the input sent by the user \n" +
+    "function unknownCommand() is supposed to run when all other commands have failed \n"+
+    "function quit() exits the App \n" +
+    "function hello() says hello \n "
+
+
+
+
+
+  )
+}
 /**
  * Starts the application
  * This is the function that is run when the app starts
