@@ -79,7 +79,7 @@ function unknownCommand(c){
  * @returns {void}
  */
 function hello(text){ 
-  console.log(text.trim("")+"!")
+  console.log(text.trim(" ")+"!")
 }
 
 
