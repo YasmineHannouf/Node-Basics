@@ -51,6 +51,10 @@ function onDataReceived(text) {
   else if (text.startsWith('hello')) {
     hello(text); 
   }
+  else if(text=="list\n") {
+    list1()
+  }
+
   else{
     unknownCommand(text);
   }
@@ -78,7 +82,17 @@ function hello(text){
   console.log(text.trim(" ")+"!")
 }
 
+/**list */
+var list1=["first","second","third"]
 
+//*function list
+function list(){
+  console.log(list1)
+  list1.map((index))=>{
+  console.log (`${list1.indexOf(index)+1}-${index}`);
+  }
+
+}
 /**
  * Exits the application
  *
