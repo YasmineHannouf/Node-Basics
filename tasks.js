@@ -1,4 +1,4 @@
-
+// Command "help", that lists all the possible commands
 /**
  * Starts the application
  * This is the function that is run when the app starts
@@ -6,14 +6,14 @@
  * It prints a welcome line, and then a line with "----",
  * then nothing.
  *  
- * @param  {string} Yasmine the name of the app
+ * @param  {string} name the name of the app
  * @returns {void}
  */
-function startApp(Yasmine){
-  process.stdin.resume();
+function startApp(name){
+  process.stdin.resume();name
   process.stdin.setEncoding('utf8');
   process.stdin.on('data', onDataReceived);
-  console.log(`Welcome to ${Yasmine}'s application!`)
+  console.log(`Welcome to ${name}'s application!`)
   console.log("--------------------")
 }
 
@@ -80,3 +80,5 @@ function quit(){
 
 // The following line starts the application
 startApp("Yasmine Hannouf")
+
+// Command "help", that lists all the possible commands
