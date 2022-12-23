@@ -57,7 +57,9 @@ function onDataReceived(text) {
   else if (text.startsWith('add')){
     add(text)
   }
-
+  else if (text.startsWith('remove')) {
+    remove(text); 
+  }
   else{
     unknownCommand(text);
   }
@@ -104,9 +106,20 @@ function list(){
       list1.push(text.slice(3).trim())
       console.log("added")
     }
-    
+  }
+
+  //functiom remove: remove a specific tesl from tasks list
+  function remove(element){
+    if(element === 'remove\n') {
+      list1.pop()
+    } else {
+      element = element.replace('\n', '').trim()
+      element = element.split(" ").slice(1).join(' ');
+      list1.splice(parseInt(element) - 1,1)
+      if(parseInt(element) > list1.length) console.log("not available number");
+    }
   
-}
+  }
 /**
  * Exits the application
  *
