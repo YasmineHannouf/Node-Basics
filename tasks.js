@@ -7,7 +7,8 @@ function help (){
     "function unknownCommand() is supposed to run when all other commands have failed \n"+
     "function quit() exits the App \n" +
     "function hello() says hello \n " +
-    "function extended hello() using split\n"
+    "function extended hello() using split\n" +
+    "function remove() remove a specific tesl from tasks list"
   )
 }
 /**
@@ -59,6 +60,8 @@ function onDataReceived(text) {
   }
   else if (text.startsWith('remove')) {
     remove(text); 
+  } else if(text.startsWith('edit')){
+    edit(text)
   }
   else{
     unknownCommand(text);
@@ -119,6 +122,19 @@ function list(){
       if(parseInt(element) > list1.length) console.log("not available number");
     }
   
+  }
+  //function edit 
+  function edit(something){
+    if(something=="edit\n"){
+      console.log("please select a task number to edit")
+    }
+    else{
+    index=something.trim().split(" ")[1]
+    if(!parseInt(index)){
+        list1[list1.length-1]=index
+      }
+    else{list1[index-1]=something.trim().split(" ")[2]}
+  }
   }
 /**
  * Exits the application
