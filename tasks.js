@@ -52,7 +52,10 @@ function onDataReceived(text) {
     hello(text); 
   }
   else if(text=="list\n") {
-    list1()
+    list()
+  }
+  else if (text.startsWith('add')){
+    add(text)
   }
 
   else{
@@ -83,15 +86,26 @@ function hello(text){
 }
 
 /**list */
-var list1=["first","second","third"]
+var list1=["first","second","third"];
 
 //*function list
 function list(){
   console.log(list1)
-  list1.map((index))=>{
-  console.log (`${list1.indexOf(index)+1}-${index}`);
-  }
-
+  list1.map((index)=>{
+  console.log(`${list1.indexOf(index)+1}-${index}`);
+  })}
+  
+  //function add
+  function add(text){
+    if(text.slice(3).trim() == ""){
+      console.log('you have error,add a task')
+    }
+    else {
+      list1.push(text.slice(3).trim())
+      console.log("added")
+    }
+    
+  
 }
 /**
  * Exits the application
