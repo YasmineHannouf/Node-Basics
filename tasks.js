@@ -63,6 +63,9 @@ function onDataReceived(text) {
   } else if(text.startsWith('edit')){
     edit(text)
   }
+  else if(text.startsWith('check') || text.startsWith('uncheck')){
+    checkAndUncheck(text)
+  }
   else{
     unknownCommand(text);
   }
@@ -136,6 +139,22 @@ function list(){
     else{list1[index-1]=something.trim().split(" ")[2]}
   }
   }
+
+  //function check
+
+  function checkAndUncheck(something) {
+    let checkOrUncheck = something.trim().split(" ")[0];
+    let taskIndex = parseInt(something.trim().split(" ").slice(1).join(" "));
+    if(taskIndex > list1.length) {
+      return console.log("number does not exist")
+    }
+    if(type === "check") {
+      list1[taskIndex - 1] = list1[taskIndex - 1].replace("[ ]", "[✓]")
+    } else if (type === "check"){
+      list1[taskIndex - 1] = list1[taskIndex - 1].replace("[✓]", "[ ]")
+    }
+  }
+
 /**
  * Exits the application
  *
