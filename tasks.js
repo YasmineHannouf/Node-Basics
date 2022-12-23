@@ -98,7 +98,7 @@ function list(){
   //function add
   function add(text){
     if(text.slice(3).trim() == ""){
-      console.log('you have error,add a task')
+      console.log('You have error,add a task')
     }
     else {
       list1.push(text.slice(3).trim())
